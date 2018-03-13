@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  div.wrapper
+    //- Use javascript
+    - const upCat = cat.toUpperCase();
+
+    p.hello Hello, my cat's name is #{upCat}
+    span#yo Yo!
+    img.cat(src="cat.jpg" alt=`Cat ${cat}`)
+
+  h2
+    | Hello World!
+    em How are you?
+
+  //- Using moment.js
+  h2 Sale ends #{h.moment().endOf('day').fromNow()}
